@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YSn-hY-zao">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YSn-hY-zao">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TYE-5o-U89">
-                                <rect key="frame" x="140" y="542" width="320" height="50"/>
-                            </adBannerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Barrington High School Utillity " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-Ml-bCf">
                                 <rect key="frame" x="45" y="99" width="516" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -47,25 +44,43 @@
                                     <segue destination="wYI-eJ-5BL" kind="show" identifier="schedule" id="oRo-RR-ET8"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UvK-PE-kvE">
+                                <rect key="frame" x="20" y="157" width="560" height="377"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hE9-P1-BPf">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hE9-P1-BPf" id="D42-eI-Li2">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TwP-Ml-bCf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="3WT-Hj-C6x"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TYE-5o-U89" secondAttribute="bottom" id="C5z-vA-zK4"/>
-                            <constraint firstItem="TYE-5o-U89" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cZu-6X-XcO"/>
                             <constraint firstItem="TwP-Ml-bCf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h6A-RS-rLb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FsL-5Z-M0R"/>
+                    <connections>
+                        <outlet property="bellBack" destination="vQL-15-nXX" id="2QU-6J-Ram"/>
+                        <outlet property="mapBack" destination="Cia-tv-rzJ" id="Whk-MI-OlG"/>
+                        <outlet property="myTableView" destination="UvK-PE-kvE" id="mn0-Ji-kof"/>
+                        <outlet property="scheduleBack" destination="vkU-u4-gHt" id="cJP-9Y-A3t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-244" y="148"/>
         </scene>
-        <!--View Controller-->
+        <!--Schedule View Controller-->
         <scene sceneID="gUv-C4-BdY">
             <objects>
-                <viewController id="wYI-eJ-5BL" sceneMemberID="viewController">
+                <viewController id="wYI-eJ-5BL" customClass="ScheduleViewController" customModule="BhsUtilityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hhr-zF-G6n"/>
                         <viewControllerLayoutGuide type="bottom" id="ILW-2g-jjp"/>
@@ -100,15 +115,18 @@
                     </toolbarItems>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="myScheduleTableView" destination="IpI-hy-wxD" id="9Eh-b0-U7q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7E2-cv-Fk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="593" y="868"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="lgC-Cm-7Ou">
             <objects>
-                <viewController id="BY6-Po-1dH" sceneMemberID="viewController">
+                <viewController id="BY6-Po-1dH" customClass="MapViewController" customModule="BhsUtilityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qfc-Nr-eJM"/>
                         <viewControllerLayoutGuide type="bottom" id="yyR-Gb-pxg"/>
@@ -132,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="593" y="-553"/>
         </scene>
-        <!--View Controller-->
+        <!--Bell View Controller-->
         <scene sceneID="jTV-7V-aaz">
             <objects>
-                <viewController id="olk-sK-UFl" sceneMemberID="viewController">
+                <viewController id="olk-sK-UFl" customClass="BellViewController" customModule="BhsUtilityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QN4-MA-9uc">
                         <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -159,6 +177,9 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="myBellTableView" destination="QN4-MA-9uc" id="h79-ar-HEs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAf-nK-bGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
