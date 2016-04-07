@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 
     @IBOutlet weak var myTableView: UITableView!
+    
     
     @IBOutlet weak var bellBack: UIButton!
     @IBOutlet weak var mapBack: UIButton!
@@ -26,8 +27,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        myTableView.dataSource = self
+        
         myTableView.delegate = self
+        myTableView.dataSource = self
+       
         
     }
 
@@ -44,6 +47,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
        
         return myCell
     }
+
+    
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         if(indexPath.row == 0)
@@ -64,6 +70,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 
+    
+    
 
 }
 

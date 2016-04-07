@@ -8,10 +8,11 @@
 
 import UIKit
 
-class BellViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+class BellViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     
-    @IBOutlet var myBellTableView: UITableView!
+    @IBOutlet var myTableView: UITableView!
+    
     
     var defult = ["t1","t2","t3"]
 
@@ -19,8 +20,8 @@ class BellViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        myBellTableView.dataSource = self
-        myBellTableView.delegate = self
+        self.myTableView.dataSource = self
+        self.myTableView.delegate = self
 
     }
     
@@ -31,7 +32,7 @@ class BellViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let myCell = myBellTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+        let myCell = myTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
         
         myCell.textLabel?.text = defult[indexPath.row]
         
