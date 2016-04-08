@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class ViewController: UIViewController
 {
 
-    @IBOutlet weak var myTableView: UITableView!
+   
     
     
     @IBOutlet weak var bellBack: UIButton!
@@ -28,47 +28,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         super.viewDidLoad()
         
-        myTableView.delegate = self
-        myTableView.dataSource = self
+        
        
         
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return chocies.count
-    }
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
-        let myCell = myTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
-        
-        myCell.textLabel?.text = chocies[indexPath.row]
-       
-        return myCell
-    }
-
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-    {
-        if(indexPath.row == 0)
-        {
-            performSegueWithIdentifier("map", sender: mapBack)
-            
-        }
-        if(indexPath.row == 1)
-        {
-            performSegueWithIdentifier("bell", sender: bellBack)
-            
-        }
-        if(indexPath.row == 2)
-        {
-            performSegueWithIdentifier("schedule", sender: scheduleBack)
-            
-        }
-        
-    }
+   
 
     
     
