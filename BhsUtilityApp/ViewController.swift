@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class ViewController: UIViewController
 {
 
-    @IBOutlet weak var myTableView: UITableView!
+   
     
     
     @IBOutlet weak var bellBack: UIButton!

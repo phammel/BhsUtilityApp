@@ -24,7 +24,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         myTableView.dataSource = self
     
 
-    }
+    }                           
     
     
    
