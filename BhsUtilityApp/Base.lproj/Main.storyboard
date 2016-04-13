@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Barrington High School Utillity " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-Ml-bCf">
-                                <rect key="frame" x="70" y="99" width="505" height="50"/>
+                                <rect key="frame" x="70" y="99" width="505" height="139"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -157,7 +157,11 @@
                     <toolbarItems>
                         <barButtonItem title="Normal" width="110" id="TbJ-xD-7Qh"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="A4z-Jn-UKr"/>
-                        <barButtonItem title="Wednesday" width="110" id="Rca-Be-TeC"/>
+                        <barButtonItem title="Wednesday" width="110" id="Rca-Be-TeC">
+                            <connections>
+                                <action selector="WednesdayButton:" destination="olk-sK-UFl" id="dXE-km-bEZ"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

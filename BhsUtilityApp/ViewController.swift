@@ -28,8 +28,8 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
-        myTableView.delegate = self
-        myTableView.dataSource = self
+        //myTableView.delegate = self
+        //myTableView.dataSource = self
        
         
     }
