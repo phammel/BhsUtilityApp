@@ -10,11 +10,12 @@ import UIKit
 
 class ScheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-
-   
     @IBOutlet var myTableView: UITableView!
     
-    var defult = ["c1","c2","c3"]
+    var defult = ["Clase 1","Class 2","Class 3","Class 2"]
+    
+    var classes = [Classes]()
+
 
     
     override func viewDidLoad()
