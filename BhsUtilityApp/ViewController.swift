@@ -28,17 +28,17 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
-        
+        //myTableView.delegate = self
+        //myTableView.dataSource = self
        
         
     }
 
-    
-    
-   
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return chocies.count
+    }
 
-    
-    
 
 }
 
