@@ -14,7 +14,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var defult = ["Clase 1","Class 2","Class 3","Class 2"]
     
-    var classes = [Classes]()
+     var classes = [Class]()
 
 
     
@@ -24,7 +24,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
        myTableView.delegate = self
         myTableView.dataSource = self
     
-
+        classes.append(Class(teacher: "", roomNumber:"" ,hour: "", nameOfClass: ""))
     }                           
     
     

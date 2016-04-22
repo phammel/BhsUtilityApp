@@ -17,6 +17,7 @@
 		3F4DDBF61CB68E3D001B34F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DDBF51CB68E3D001B34F9 /* MapViewController.swift */; };
 		3F4DDBF81CB68E63001B34F9 /* BellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DDBF71CB68E63001B34F9 /* BellViewController.swift */; };
 		3F4DDBFA1CB68EC0001B34F9 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DDBF91CB68EC0001B34F9 /* ScheduleViewController.swift */; };
+		3F613A301CC537F600957D59 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F613A2F1CC537F600957D59 /* Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3F4DDBF51CB68E3D001B34F9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3F4DDBF71CB68E63001B34F9 /* BellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellViewController.swift; sourceTree = "<group>"; };
 		3F4DDBF91CB68EC0001B34F9 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		3F613A2F1CC537F600957D59 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				3F4DDBF51CB68E3D001B34F9 /* MapViewController.swift */,
 				3F4DDBF71CB68E63001B34F9 /* BellViewController.swift */,
 				3F4DDBF91CB68EC0001B34F9 /* ScheduleViewController.swift */,
+				3F613A2F1CC537F600957D59 /* Class.swift */,
 				3F1BF8501CB2BDE300C521FE /* Main.storyboard */,
 				3F1BF8531CB2BDE300C521FE /* Assets.xcassets */,
 				3F1BF8551CB2BDE300C521FE /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F613A301CC537F600957D59 /* Class.swift in Sources */,
 				3F4DDBFA1CB68EC0001B34F9 /* ScheduleViewController.swift in Sources */,
 				3F1BF84F1CB2BDE300C521FE /* ViewController.swift in Sources */,
 				3F4DDBF81CB68E63001B34F9 /* BellViewController.swift in Sources */,
