@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YSn-hY-zao">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YSn-hY-zao">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -92,15 +92,23 @@
                         </prototypes>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem title="Add Class" id="QdX-YV-QtH"/>
+                        <barButtonItem title="Add Class" id="QdX-YV-QtH">
+                            <connections>
+                                <action selector="addClass:" destination="wYI-eJ-5BL" id="FEc-YY-h3K"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="YeY-4z-Xle"/>
-                        <barButtonItem title="Directions" id="C1y-5z-1uo"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="74S-XG-N9T"/>
-                        <barButtonItem title="Delete Class" id="p4r-Fi-3Sc"/>
+                        <barButtonItem title="Edit " id="p4r-Fi-3Sc">
+                            <connections>
+                                <action selector="editButton:" destination="wYI-eJ-5BL" id="Ldr-xI-Bj2"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
+                        <outlet property="editButton" destination="p4r-Fi-3Sc" id="pUd-rr-NW6"/>
                         <outlet property="myTableView" destination="xMP-Zi-NgK" id="tQK-xe-fDA"/>
                     </connections>
                 </viewController>
