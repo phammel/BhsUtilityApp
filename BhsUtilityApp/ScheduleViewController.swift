@@ -42,6 +42,12 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         myCell.textLabel?.text = "\(classes[indexPath.row].teacher), \(classes[indexPath.row].roomNumber), \(classes[indexPath.row].hour), \(classes[indexPath.row].nameOfClass)"
         return myCell
     }
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
+        let classh = classes[sourceIndexPath.row]
+        classes.removeAtIndex(sourceIndexPath.row)
+        classes.insert(classh, atIndex:destinationIndexPath.row)
+    }
 
   
     @IBAction func addClass(sender: AnyObject)
